@@ -1,0 +1,29 @@
+.container
+{
+    background-color: white;
+    width:50%;
+    height:400px;
+    border: 1px solid black;
+    border-radius:20px;
+    margin-left:25%;
+    margin-top:5%;
+    float:left;
+}
+
+h1
+{
+    text-align:center;
+}
+
+.inputbox
+{
+    border-radius:10px;
+    margin-top: 10%;
+}
+
+.btn
+{
+    margin-top:5%;
+    float:right;
+    margin-left:3%;
+}

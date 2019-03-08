@@ -1,0 +1,21 @@
+<h1>Add Contacts</h1>
+<div class="container">
+  <div class="form">
+    <form #employeeForm="ngForm" (ngSubmit)="submit()">
+    <label>Name:</label>
+    <input required type="text" class="inputbox"  [(ngModel)]="cont_obj.name" name='name' #fullNameControl="ngModel" (keyup)="validateName()"><br>
+    <!-- <p>{{name}}</p> -->
+     <div class="badge" *ngIf="!checkName">Please enter a valid Name</div><br>
+
+    <label>Email:</label>
+    <input type="email" class="inputbox" [(ngModel)]="cont_obj.email" name='email' (keyup)="validateEmail()"><br>
+    <div class="badge" *ngIf="!checkEmail">Please enter a valid Email address</div><br>
+    <label>Phone:</label>
+    <input type="text" maxlength="10" class="inputbox box" [(ngModel)]="cont_obj.phone" name="phone" (keyup)="validatePhone(cont_obj.phone)" onkeypress="if(event.charCode >= 48 && event.charCode <= 57){return event}else{return false}"><br>
+
+    <div class="badge" *ngIf="!checkPhone">Please enter a valid Phone Number</div><br>
+    <input type="submit" value="Submit" class="btn btn-sm btn-success" [disabled]="validate" [(ngModel)]="validate">
+    <input type="button" value="Reset" class="btn btn-sm btn-danger">
+    </form>
+  </div>  
+</div>

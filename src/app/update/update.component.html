@@ -1,0 +1,18 @@
+<h1>Update Contacts</h1>
+
+<div class="container">
+  <div class="form">
+    <form>
+    <label>Name:</label>
+    <input type="text" class="inputbox"  [(ngModel)]="cont_obj.name" name='name' value={{cont_obj.name}}><br>
+    <!-- <p>{{name}}</p> -->
+    <label>Email:</label>
+    <input type="email" class="inputbox" [(ngModel)]="cont_obj.email" name='email' value={{cont_obj.email}}><br>
+    <label>Phone:</label>
+    <input type="phone" class="inputbox"  [(ngModel)]="cont_obj.phone" name=phone value={{cont_obj.phone}}><br>
+
+    <input type="button" value="Update" class="btn btn-sm btn-success" (click)="update()">
+    <input type="button" value="Reset" class="btn btn-sm btn-danger">
+    </form>
+  </div>  
+</div>

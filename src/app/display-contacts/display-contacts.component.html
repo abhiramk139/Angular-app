@@ -1,0 +1,27 @@
+<h1>Contacts</h1>
+
+<div class="container">
+  <table class="table table-striped">
+      <thead>
+        <tr class="head">
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="contact!=undefined">
+          <tr *ngFor="let cont of contact">
+              <td>{{cont.name}}</td>
+              <td>{{cont.email}}</td>
+              <td>{{cont.phone}}</td>
+              <td><button class="btn btn-sm btn-success" routerLink="/update_contacts/{{cont.id}}">Update</button></td>
+              <td><button class="btn btn-sm btn-danger" (click)="delete(cont)">Delete</button></td>
+            </tr>
+      </tbody>
+    </table>
+</div>
+<div>
+    <button class="btn btn-sm btn-warning" routerLink="/add_update">Add Contact</button>
+</div>
